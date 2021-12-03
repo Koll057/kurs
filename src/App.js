@@ -1,10 +1,10 @@
-
+import Card from './Components/Card/Card';
 import './App.css';
-
+import img1 from './Components/img/1.png'
 function App() {
   return (
     <div className="App">
-      hello world
+      <Card nameC="Tapki" imgC={img1}/>
     </div>
   );
 }
