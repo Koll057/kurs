@@ -1,10 +1,13 @@
 import Card from './Components/Card/Card';
+import Header from "./Components/Header/Header"
+import CardHolder from "./Components/CardHolder/CardHolder";
 import './App.css';
 import img1 from './Components/img/1.png'
 function App() {
   return (
     <div className="App">
-      <Card nameC="Tapki" imgC={img1}/>
+      <Header/>
+      <CardHolder/>
     </div>
   );
 }
