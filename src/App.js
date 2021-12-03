@@ -1,10 +1,12 @@
-
+import Header from "./Components/Header/Header"
+import CardHolder from "./Components/CardHolder/CardHolder";
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      hello world
+      <Header/>
+      <CardHolder/>
     </div>
   );
 }
