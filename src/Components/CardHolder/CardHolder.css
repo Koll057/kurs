@@ -1,0 +1,6 @@
+.CardHolder{
+  border: 1px solid black;
+  height:250px;
+  background-image: url(./derevo-minimalizm-fon-wood-background.jpeg);
+  background-position: 30% 40%;
+}
