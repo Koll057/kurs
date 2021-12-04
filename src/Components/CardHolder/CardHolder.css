@@ -7,6 +7,6 @@
 .Container{
   width:65%;
   display: flex;
-  margin:25cpx auto;
+  margin:25px auto;
   justify-content:space-between;
 }
