@@ -1,6 +1,6 @@
 import Card from './Components/Card/Card';
 import Header from "./Components/Header/Header"
-import CardHolder from "./Components/CardHolder/CardHolder";
+import MainPage from "./Components/MainPage/MainPage";
 import Footer from "./Components/Footer/Footer";
 import './App.css';
 import img1 from './Components/img/1.png';
@@ -10,8 +10,8 @@ import {useState} from 'react';
 import { Route,Routes,Link } from 'react-router-dom';
 import "./Components/AboutUs/AboutUs"
 import AboutUs from './Components/AboutUs/AboutUs';
+
 function App() {
-  const [GoodId,SetGoodId] = useState(-1);
   let Cards = [
     {Image:img1, Name:"Тапочки",id:0},
     {Image:img1, Name:"Шапки",id:1},
@@ -24,10 +24,10 @@ function App() {
       <Header/>
       <Routes>
         <Route path="/" element={
-          <CardHolder>
-          {Cards.map(card => <Card click={()=>{SetGoodId(card.id)}} key={card.id} name={card.Name} img={card.Image} />)}
-          </CardHolder>
+          <MainPage cards={Cards}/>
         }>
+          <Route path="buy"/>
+          <Route path="buy/0" element={<Footer imgb1={imgF1} imgb2={imgF2}/>}/>
         </Route>
         <Route path="/AboutUs" element={<AboutUs/>}/>
       </Routes>

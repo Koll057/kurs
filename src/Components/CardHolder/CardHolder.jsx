@@ -1,8 +1,11 @@
 import "./CardHolder.css"
-export default function CardHolder(props){
+import Card from "../Card/Card"
+import { useNavigate } from "react-router"
+export default function CardHolder({cards}){
+  const navigate = useNavigate();
   return <div className="CardHolder">
     <div className="Container">
-      {props.children}
+      {cards.map(card => <Card click={()=>{navigate(`/buy/${card.id}`)}} key={card.id} name={card.Name} img={card.Image} />)}
     </div>
   </div>
 }
