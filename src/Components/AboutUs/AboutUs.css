@@ -1,0 +1,19 @@
+.AboutUs{
+  width: 100%;
+  height: calc(100vh - 50px);
+  background-size: cover;
+  background: url(./novyi-god-rodzhestvo-kamin-noski-podarki-teplo-uiut-prazdnik.jpeg) no-repeat center center fixed;
+  margin: 0 0;
+  overflow: hidden;
+}
+.AboutUs .info {
+  margin: 100px auto;
+  padding:20px;
+  width:600px;
+  height:300px;
+  color: white;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:1.3rem;
+  background-color:#8b533d;
+  box-shadow: 0px 0px 18px 6px rgba(0,0,0,0.7);
+}

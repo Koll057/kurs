@@ -4,3 +4,9 @@
   background-image: url(./derevo-minimalizm-fon-wood-background.jpeg);
   background-position: 30% 40%;
 }
+.Container{
+  width:65%;
+  display: flex;
+  margin:25px auto;
+  justify-content:space-between;
+}
