@@ -4,6 +4,7 @@ import CardHolder from "./Components/CardHolder/CardHolder";
 import Footer from "./Components/Footer/Footer";
 import './App.css';
 import img1 from './Components/img/1.png';
+import imgF0 from './Components/img/background0.jpg';
 import imgF1 from './Components/img/b1.png';
 import imgF2 from './Components/img/b2.png';
 import {useState} from 'react';
@@ -31,6 +32,7 @@ function App() {
         </Route>
         <Route path="/AboutUs" element={<AboutUs/>}/>
       </Routes>
+      <div className="fonk" style = {{width: "100%", height: "670px", background: `url(${imgF0})`, backgroundSize:"cover"}}></div>
     </div>
   );
 }
