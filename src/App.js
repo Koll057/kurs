@@ -4,7 +4,9 @@ import CardHolder from "./Components/CardHolder/CardHolder";
 import './App.css';
 import img1 from './Components/img/1.png';
 import {useState} from 'react';
-
+import { Route,Routes,Link } from 'react-router-dom';
+import "./Components/AboutUs/AboutUs"
+import AboutUs from './Components/AboutUs/AboutUs';
 function App() {
   const [GoodId,SetGoodId] = useState(-1);
   let Cards = [
@@ -17,9 +19,15 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      <CardHolder>
-        {Cards.map(card => <Card click={()=>{SetGoodId(card.id)}} key={card.id} name={card.Name} img={card.Image} />)}
-      </CardHolder>
+      <Routes>
+        <Route path="/" element={
+          <CardHolder>
+          {Cards.map(card => <Card click={()=>{SetGoodId(card.id)}} key={card.id} name={card.Name} img={card.Image} />)}
+          </CardHolder>
+        }>
+        </Route>
+        <Route path="/AboutUs" element={<AboutUs/>}/>
+      </Routes>
     </div>
   );
 }
