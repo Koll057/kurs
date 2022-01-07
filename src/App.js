@@ -20,11 +20,12 @@ import b9 from "./Components/img/b9.png";
 import b10 from "./Components/img/b10.png";
 import imgF0 from "./Components/img/background0.jpg";
 import {useState} from 'react';
-import { Route,Routes,Link } from 'react-router-dom';
+import { Route,Routes,Link,useLocation} from 'react-router-dom';
 import "./Components/AboutUs/AboutUs"
 import AboutUs from './Components/AboutUs/AboutUs';
 
 function App() {
+  let location = useLocation();
   let Cards = [
     {Image:img1, Name:"Тапочки",id:0},
     {Image:img2, Name:"Шапки",id:1},
@@ -37,7 +38,10 @@ function App() {
       <Header/>
       <Routes>
         <Route path="/" element={
+          <div>
           <MainPage cards={Cards}/>
+          {location.pathname ==='/' && <div className="fonk" style = {{width: "100%", height: "670px", background: `url(${imgF0})`, backgroundSize:"cover"}}/>}
+          </div>
         }>
           <Route path="buy" element={      <div className="fonk" style = {{width: "100%", height: "670px", background: `url(${imgF0})`, backgroundSize:"cover"}}/>}/>
           <Route path="buy/0" element={<Footer imgb1={b1} imgb2={b2}/>}/>
